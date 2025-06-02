@@ -43,6 +43,13 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Domain\Interfaces\IEscritorArquivo.cs" />
+    <Compile Include="Domain\Interfaces\ILeitorArquivo.cs" />
+    <Compile Include="Domain\IO\EscritorDeArquivo.cs" />
+    <Compile Include="Domain\IO\LeitorDeArquivo.cs" />
+    <Compile Include="Domain\Models\Candidato.cs" />
+    <Compile Include="Domain\Models\Curso.cs" />
+    <Compile Include="Domain\Ordenadores\NomeOrdenador.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
