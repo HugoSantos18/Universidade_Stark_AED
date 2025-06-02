@@ -24,7 +24,8 @@ o curso).
 • Lista de candidatos selecionados (nome e nota média de cada candidato), em ordem decrescente de nota média.
 • Fila de espera (nome e nota média de cada candidato), em ordem decrescente de nota média.
 
-- Arquivo de Entrada (entrada.txt)
+**Arquivo de Entrada (entrada.txt)**
+
 A primeira linha do arquivo de entrada conterá dois inteiros N e M:
 N : número de cursos
 M: número de candidatos
