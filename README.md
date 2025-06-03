@@ -3,7 +3,7 @@
 Este projeto foi desenvolvido pelos seguintes integrantes: 
 
 - **Hugo dos Santos**
-- **Lucas Henrique**
+- **Lucas Almeida**
 - **Vitor Abreu**
 
 ## Descrição do problema
