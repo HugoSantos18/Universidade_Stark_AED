@@ -1,4 +1,10 @@
-# Universidade_Stark_AED
+# Universidade Stark - Trabalho Prático de Algoritmos e Estruturas de Dados
+
+Este projeto foi desenvolvido pelos seguintes integrantes: 
+
+- **Hugo dos Santos**
+- **Lucas Henrique**
+- **Vitor Abreu**
 
 ## Descrição do problema
 
