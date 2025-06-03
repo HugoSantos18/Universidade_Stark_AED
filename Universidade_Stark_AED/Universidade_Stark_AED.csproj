@@ -43,15 +43,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Domain\Interfaces\IEscritorArquivo.cs" />
-    <Compile Include="Domain\Interfaces\ILeitorArquivo.cs" />
-    <Compile Include="Domain\IO\EscritorDeArquivo.cs" />
-    <Compile Include="Domain\IO\LeitorDeArquivo.cs" />
-    <Compile Include="Domain\Models\Candidato.cs" />
-    <Compile Include="Domain\Models\Curso.cs" />
-    <Compile Include="Domain\Ordenadores\NomeOrdenador.cs" />
+    <Compile Include="DataStructures\FilaFlexivel.cs" />
+    <Compile Include="Entities\Curso.cs" />
+    <Compile Include="IO\EscritorArquivo.cs" />
+    <Compile Include="IO\LeitorArquivo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\Ordenador.cs" />
+    <Compile Include="Services\ProcessadorSelecao.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />

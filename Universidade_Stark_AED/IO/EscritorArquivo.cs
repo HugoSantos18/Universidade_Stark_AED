@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidade_Stark_AED.Domain.Ordenadores
+namespace Universidade_Stark_AED.IO
 {
-    internal class NomeOrdenador
+    internal class EscritorArquivo
     {
-
-
     }
 }

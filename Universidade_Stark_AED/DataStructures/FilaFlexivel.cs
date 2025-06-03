@@ -4,10 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidade_Stark_AED.Domain.Interfaces
+namespace Universidade_Stark_AED.DataStructures
 {
-    public interface IEscritorArquivo
+    internal class FilaFlexivel
     {
-        void EscreverArquivo(string caminho);
     }
 }

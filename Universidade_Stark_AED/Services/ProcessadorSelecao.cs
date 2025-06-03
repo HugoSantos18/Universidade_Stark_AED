@@ -4,11 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidade_Stark_AED.Domain.Models
+namespace Universidade_Stark_AED.Services
 {
-    internal class Curso
+    internal class ProcessadorSelecao
     {
-
-
     }
 }
