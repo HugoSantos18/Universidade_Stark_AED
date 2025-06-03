@@ -19,8 +19,7 @@ opções de curso, ele deve ser incluído apenas na lista de candidatos selecion
 O programa deverá ler informações de um arquivo de entrada e ao final do processamento deverá criar um arquivo texto
 contendo as seguintes informações:
 
-• Nome e nota de corte de cada curso (A nota de corte de cada curso é a menor nota média dos selecionados para
-o curso).
+• Nome e nota de corte de cada curso (A nota de corte de cada curso é a menor nota média dos selecionados para o curso).
 • Lista de candidatos selecionados (nome e nota média de cada candidato), em ordem decrescente de nota média.
 • Fila de espera (nome e nota média de cada candidato), em ordem decrescente de nota média.
 
