@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidade_Stark_AED.Services
+namespace Universidade_Stark_AED.Interfaces
 {
-    public class Ordenador
+    public interface ILeitorArquivo
     {
-
+        void LerArquivo(string caminho);
     }
 }

@@ -6,7 +6,8 @@ using System.Threading.Tasks;
 
 namespace Universidade_Stark_AED.DataStructures
 {
-    internal class FilaFlexivel
+    class FilaFlexivel
     {
+        // TO DO
     }
 }

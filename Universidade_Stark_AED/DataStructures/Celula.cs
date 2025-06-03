@@ -4,10 +4,11 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Universidade_Stark_AED.Services
+namespace Universidade_Stark_AED.DataStructures
 {
-    public class Ordenador
+    class Celula
     {
+        // TO DO
 
     }
 }
