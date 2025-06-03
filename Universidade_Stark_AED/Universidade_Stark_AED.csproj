@@ -43,8 +43,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DataStructures\Celula.cs" />
     <Compile Include="DataStructures\FilaFlexivel.cs" />
+    <Compile Include="Entities\Candidato.cs" />
     <Compile Include="Entities\Curso.cs" />
+    <Compile Include="Interfaces\IEscritorArquivo.cs" />
+    <Compile Include="Interfaces\ILeitorArquivo.cs" />
     <Compile Include="IO\EscritorArquivo.cs" />
     <Compile Include="IO\LeitorArquivo.cs" />
     <Compile Include="Program.cs" />
