@@ -54,7 +54,7 @@
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\Ordenador.cs" />
-    <Compile Include="Services\ProcessadorSelecao.cs" />
+    <Compile Include="Services\ProcessoSeletivo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
