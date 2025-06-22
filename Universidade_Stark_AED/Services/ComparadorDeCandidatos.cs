@@ -11,13 +11,13 @@ namespace Universidade_Stark_AED.Services
     {
         public int Compare(Candidato x, Candidato y)
         {
-            double mediaX = x.Media;
-            double mediaY = y.Media;
+            double mediaX = x.MediaNotas();
+            double mediaY = y.MediaNotas();
 
             if (mediaX != mediaY)
                 return mediaY.CompareTo(mediaX);
             else
-                return y.NotaRedacao.CompareTo(x.NotaRedacao);
+                return y.GetNotaRedacao().CompareTo(x.GetNotaRedacao());
         }
     }
 }

@@ -7,7 +7,7 @@ using Universidade_Stark_AED.DataStructures;
 
 namespace Universidade_Stark_AED.Entities
 {
-    class Curso
+    public class Curso
     {
         private int _codigoCurso;
         private string _nomeCurso;
