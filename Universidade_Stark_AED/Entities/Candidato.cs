@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Universidade_Stark_AED.Entities
 {
-    class Candidato
+    public class Candidato
     {
         private string _nomeCandidato;
         private double _notaRedacao;
@@ -14,10 +14,10 @@ namespace Universidade_Stark_AED.Entities
         private double _notaPortugues;
         private int _codigoPrimeiraOpcao;
         private int _codigoSegundaOpcao;
-
+        private double _media;
 
         public Candidato(string nomeCandidato, double notaRedacao, double notaMatematica, double notaPortugues,
-                                                                   int codigoPrimeiraOpcao, int codigoSegundaOpcao)
+                                                                   int codigoPrimeiraOpcao, int codigoSegundaOpcao, double media)
         {
             this._nomeCandidato = nomeCandidato;
             this._notaRedacao = notaRedacao;
@@ -25,6 +25,7 @@ namespace Universidade_Stark_AED.Entities
             this._notaPortugues = notaPortugues;
             this._codigoPrimeiraOpcao = codigoPrimeiraOpcao;
             this._codigoSegundaOpcao = codigoSegundaOpcao;
+            this._media = media;
         }
 
 
@@ -34,5 +35,6 @@ namespace Universidade_Stark_AED.Entities
         public double NotaPortugues { get; set; }
         public int CodigoPrimeiraOpcao { get; set; }
         public int CodigoSegundaOpcao { get; set; }
+        public double Media { get; set; }
     }
 }
