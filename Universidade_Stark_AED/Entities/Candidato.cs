@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Universidade_Stark_AED.Entities
 {
-    class Candidato
+    public class Candidato
     {
         private string _nomeCandidato;
         private double _notaRedacao;

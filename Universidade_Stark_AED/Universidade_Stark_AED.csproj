@@ -53,6 +53,7 @@
     <Compile Include="IO\LeitorArquivo.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Services\ComparadorDeCandidatos.cs" />
     <Compile Include="Services\Ordenador.cs" />
     <Compile Include="Services\ProcessoSeletivo.cs" />
   </ItemGroup>
