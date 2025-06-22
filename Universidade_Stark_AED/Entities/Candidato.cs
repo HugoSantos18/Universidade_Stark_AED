@@ -1,9 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Linq;
-using System.Net.Http.Headers;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace Universidade_Stark_AED.Entities
 {
@@ -55,7 +51,7 @@ namespace Universidade_Stark_AED.Entities
 
         public double MediaNotas()
         {
-            return (_notaRedacao + _notaMatematica + _notaLinguagens) / 2;
+            return (_notaRedacao + _notaMatematica + _notaLinguagens) / NumeroProvas;
         }
 
         public override string ToString()

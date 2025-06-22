@@ -1,14 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Runtime.CompilerServices;
-using System.Text;
-using System.Threading.Tasks;
 using Universidade_Stark_AED.Services;
-using Universidade_Stark_AED.Interfaces;
 using Universidade_Stark_AED.IO;
-using Universidade_Stark_AED.DataStructures;
-using Universidade_Stark_AED.Entities;
 
 namespace Universidade_Stark_AED
 {
@@ -22,7 +14,7 @@ namespace Universidade_Stark_AED
             LeitorArquivo leitor = new LeitorArquivo();
             leitor.LerArquivo(caminhoArquivoLeitura);
 
-            ProcessoSeletivo processo = new ProcessoSeletivo(leitor);
+            ProcessoSeletivo processo = new ProcessoSeletivo(leitor.GetCursos(), leitor.GetCandidatos());
             processo.IniciarProcessoSeletivo();
 
             EscritorArquivo escritor = new EscritorArquivo();

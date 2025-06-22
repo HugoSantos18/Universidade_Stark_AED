@@ -17,9 +17,9 @@ namespace Universidade_Stark_AED.Services
 
             while (i <= j)
             {
-                while (comparador.Compare(lista[i], pivo) > 0)
+                while (i <= j && comparador.Compare(lista[i], pivo) > 0)
                     i++;
-                while (comparador.Compare(lista[j], pivo) < 0)
+                while (i <= j && comparador.Compare(lista[j], pivo) < 0)
                     j--;
 
                 if (i <= j)

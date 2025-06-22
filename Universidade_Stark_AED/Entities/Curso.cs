@@ -49,16 +49,17 @@ namespace Universidade_Stark_AED.Entities
 
         public List<Candidato> CandidatosSelecionadosOrdenados()
         {
-            algoritmoOrdenador.QuickSort(candidatosSelecionados, 0, candidatosSelecionados.Count);
+            algoritmoOrdenador.QuickSort(candidatosSelecionados, 0, candidatosSelecionados.Count - 1);
 
             return candidatosSelecionados;
         }
 
         public List<Candidato> CandidatosEsperaOrdenados()
         {
-            algoritmoOrdenador.QuickSort(filaEspera.ParaLista(), 0, filaEspera.Count());
-
-            return filaEspera.ParaLista();
+            List<Candidato> lista = filaEspera.ParaLista();
+            algoritmoOrdenador.QuickSort(lista, 0, lista.Count - 1);
+            
+            return lista;
         }
 
         public double NotaCorte()

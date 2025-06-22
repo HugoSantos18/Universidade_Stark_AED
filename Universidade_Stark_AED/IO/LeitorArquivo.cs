@@ -45,8 +45,6 @@ namespace Universidade_Stark_AED.IO
             return todosCandidatos;
         }
 
-
-
         public void LerArquivo(string caminho)
         {
             string linha;
@@ -70,13 +68,11 @@ namespace Universidade_Stark_AED.IO
 
                 linha = arquivoLeitura.ReadLine();
 
-                for (int i = 0; i < quantidadeCursos; i++)
+                for (int i = 0; i <= quantidadeCursos - 1; i++)
                 {
-                    linha = arquivoLeitura.ReadLine();
-                    if (linha == null)
-                        throw new Exception("Quantidade de cursos informada não corresponde ao arquivo.");
-
                     dados = linha.Split(';');
+
+                    linha = arquivoLeitura.ReadLine();
 
                     int codigoCurso = int.Parse(dados[0]);
                     string nome = dados[1];
@@ -86,13 +82,11 @@ namespace Universidade_Stark_AED.IO
                     todosCursos.Add(novoCurso.GetCodigoCurso(), novoCurso);
                 }
 
-                for (int i = 0; i < quantidadeCandidatos; i++)
+                for (int i = 0; i <= quantidadeCandidatos - 1; i++)
                 {
-                    linha = arquivoLeitura.ReadLine();
-                    if (linha == null)
-                        throw new Exception("Quantidade de candidatos informada não corresponde ao arquivo.");
-
                     dados = linha.Split(';');
+
+                    linha = arquivoLeitura.ReadLine();
 
                     string nome = dados[0];
                     double notaRedacao = double.Parse(dados[1]);

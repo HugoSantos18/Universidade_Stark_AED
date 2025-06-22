@@ -1,11 +1,7 @@
 ﻿using System;
-using System.CodeDom;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using Universidade_Stark_AED.Entities;
-using Universidade_Stark_AED.IO;
 
 namespace Universidade_Stark_AED.Services
 {
@@ -13,11 +9,13 @@ namespace Universidade_Stark_AED.Services
     {
         private Dictionary<int, Curso> todosCursos;
         private List<Candidato> todosCandidatos;
+        private Ordenador _ordenador;
 
-        public ProcessoSeletivo(LeitorArquivo leitor)
+        public ProcessoSeletivo(Dictionary<int, Curso> cursos, List<Candidato> candidatos)
         {
-            todosCursos = leitor.GetCursos();
-            todosCandidatos = leitor.GetCandidatos();
+            todosCursos = cursos;
+            todosCandidatos = candidatos;
+            _ordenador = new Ordenador();   
         }
 
         public void IniciarProcessoSeletivo()
@@ -37,9 +35,7 @@ namespace Universidade_Stark_AED.Services
         }
         private void OrdenarNotaCandidatos()
         {
-            Ordenador ordenador = new Ordenador();
-
-            ordenador.QuickSort(todosCandidatos, 0, todosCandidatos.Count);
+            _ordenador.QuickSort(todosCandidatos, 0, todosCandidatos.Count);
         }
 
         private void AtribuirCandidatosAoCurso()
