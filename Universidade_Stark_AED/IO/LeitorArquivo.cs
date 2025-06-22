@@ -17,26 +17,6 @@ namespace Universidade_Stark_AED.IO
         private Dictionary<int, Curso> todosCursos;
         private List<Candidato> todosCandidatos;
 
-
-        public int GetQuantidadeCursos()
-        {
-            return quantidadeCursos;
-        }
-        public int GetQuantidadeCandidatos()
-        {
-            return quantidadeCandidatos;
-        }
-        public Dictionary<int, Curso> GetCursos()
-        {
-            return todosCursos;
-        }
-
-
-        public List<Candidato> GetCandidatos()
-        {
-            return todosCandidatos;
-        }
-
         public LeitorArquivo()
         {
             this.quantidadeCursos = 0;
@@ -44,6 +24,28 @@ namespace Universidade_Stark_AED.IO
             todosCursos = new Dictionary<int, Curso>();
             todosCandidatos = new List<Candidato>();
         }
+
+        public int GetQuantidadeCursos()
+        {
+            return quantidadeCursos;
+        }
+
+        public int GetQuantidadeCandidatos()
+        {
+            return quantidadeCandidatos;
+        }
+
+        public Dictionary<int, Curso> GetCursos()
+        {
+            return todosCursos;
+        }
+
+        public List<Candidato> GetCandidatos()
+        {
+            return todosCandidatos;
+        }
+
+
 
         public void LerArquivo(string caminho)
         {
@@ -100,10 +102,9 @@ namespace Universidade_Stark_AED.IO
                     int codCursoOp2 = int.Parse(dados[5]);
 
                     Candidato novoCandidato = new Candidato(nome, notaRedacao, notaMatematica, notaLinguagens, codCursoOp1, codCursoOp2);
+                    
                     todosCandidatos.Add(novoCandidato);
                 }
-
-
                 arquivoLeitura.Close();
             }
             catch (Exception e)

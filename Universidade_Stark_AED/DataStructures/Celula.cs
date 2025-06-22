@@ -3,15 +3,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Universidade_Stark_AED.Entities;
 
 namespace Universidade_Stark_AED.DataStructures
 {
-    class Celula<T>
+    class Celula
     {
-        private T elemento;
-        private Celula<T> prox;
+        private Candidato elemento;
+        private Celula prox;
 
-        public Celula(T elemento)
+        public Celula(Candidato elemento)
         {
             this.elemento = elemento;
             this.prox = null;
@@ -19,16 +20,16 @@ namespace Universidade_Stark_AED.DataStructures
 
         public Celula()
         {
-            this.elemento = default(T);
+            this.elemento = null;
             this.prox = null;
         }
 
-        public Celula<T> Prox
+        public Celula Prox
         {
             get { return prox; }
             set { prox = value; }
         }
-        public T Elemento
+        public Candidato Elemento
         {
             get { return elemento; }
             set { elemento = value; }

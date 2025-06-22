@@ -60,7 +60,7 @@ namespace Universidade_Stark_AED.Entities
 
         public override string ToString()
         {
-            return $"{_nomeCandidato} {MediaNotas()}";
+            return $"{_nomeCandidato}" + $"{MediaNotas():F2}";
         }
     }
 }
