@@ -58,7 +58,7 @@ namespace Universidade_Stark_AED.Entities
         {
             List<Candidato> lista = filaEspera.ParaLista();
             algoritmoOrdenador.QuickSort(lista, 0, lista.Count - 1);
-            
+
             return lista;
         }
 
@@ -85,10 +85,7 @@ namespace Universidade_Stark_AED.Entities
 
         public void AddFilaEspera(Candidato candidato)
         {
-            if (TemVaga())
-            {
-                filaEspera.Inserir(candidato);
-            }
+            filaEspera.Inserir(candidato);
         }
 
         public void AddSelecionado(Candidato candidato)

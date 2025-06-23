@@ -20,7 +20,7 @@ namespace Universidade_Stark_AED
             EscritorArquivo escritor = new EscritorArquivo();
             escritor.EscreverArquivo(caminhoArquivoEscrita, processo.ObterCursosProcessados());
 
-            Console.WriteLine("Teste, verificar arquivo");
+            Console.WriteLine("Arquivo escrito");
             Console.ReadKey();
         }
     }
