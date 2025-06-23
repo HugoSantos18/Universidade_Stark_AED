@@ -17,32 +17,32 @@ namespace Universidade_Stark_AED.IO
         private Dictionary<int, Curso> todosCursos;
         private List<Candidato> todosCandidatos;
 
-
-        public int GetQuantidadeCursos()
-        {
-            return quantidadeCursos;
-        }
-        public int GetQuantidadeCandidatos()
-        {
-            return quantidadeCandidatos;
-        }
-        public Dictionary<int, Curso> GetCursos()
-        {
-            return todosCursos;
-        }
-
-
-        public List<Candidato> GetCandidatos()
-        {
-            return todosCandidatos;
-        }
-
         public LeitorArquivo()
         {
             this.quantidadeCursos = 0;
             this.quantidadeCandidatos = 0;
             todosCursos = new Dictionary<int, Curso>();
             todosCandidatos = new List<Candidato>();
+        }
+
+        public int GetQuantidadeCursos()
+        {
+            return quantidadeCursos;
+        }
+
+        public int GetQuantidadeCandidatos()
+        {
+            return quantidadeCandidatos;
+        }
+
+        public Dictionary<int, Curso> GetCursos()
+        {
+            return todosCursos;
+        }
+
+        public List<Candidato> GetCandidatos()
+        {
+            return todosCandidatos;
         }
 
         public void LerArquivo(string caminho)
@@ -68,13 +68,11 @@ namespace Universidade_Stark_AED.IO
 
                 linha = arquivoLeitura.ReadLine();
 
-                for (int i = 0; i < quantidadeCursos; i++)
+                for (int i = 0; i <= quantidadeCursos - 1; i++)
                 {
-                    linha = arquivoLeitura.ReadLine();
-                    if (linha == null)
-                        throw new Exception("Quantidade de cursos informada não corresponde ao arquivo.");
-
                     dados = linha.Split(';');
+
+                    linha = arquivoLeitura.ReadLine();
 
                     int codigoCurso = int.Parse(dados[0]);
                     string nome = dados[1];
@@ -84,13 +82,11 @@ namespace Universidade_Stark_AED.IO
                     todosCursos.Add(novoCurso.GetCodigoCurso(), novoCurso);
                 }
 
-                for (int i = 0; i < quantidadeCandidatos; i++)
+                for (int i = 0; i <= quantidadeCandidatos - 1; i++)
                 {
-                    linha = arquivoLeitura.ReadLine();
-                    if (linha == null)
-                        throw new Exception("Quantidade de candidatos informada não corresponde ao arquivo.");
-
                     dados = linha.Split(';');
+
+                    linha = arquivoLeitura.ReadLine();
 
                     string nome = dados[0];
                     double notaRedacao = double.Parse(dados[1]);
@@ -100,10 +96,9 @@ namespace Universidade_Stark_AED.IO
                     int codCursoOp2 = int.Parse(dados[5]);
 
                     Candidato novoCandidato = new Candidato(nome, notaRedacao, notaMatematica, notaLinguagens, codCursoOp1, codCursoOp2);
+                    
                     todosCandidatos.Add(novoCandidato);
                 }
-
-
                 arquivoLeitura.Close();
             }
             catch (Exception e)

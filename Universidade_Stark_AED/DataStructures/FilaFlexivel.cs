@@ -1,39 +1,51 @@
 ﻿using System;
+using System.Collections.Generic;
+using Universidade_Stark_AED.Entities;
+using Universidade_Stark_AED.Services;
 
 namespace Universidade_Stark_AED.DataStructures
 {
-    class FilaFlexivel<T> where T : class
+    class FilaFlexivel
     {
-        private Celula<T> primeiro, ultimo;
-
+        private Celula primeiro, ultimo;
+        private int contador;
         public FilaFlexivel()
         {
-            primeiro = ultimo = new Celula<T>(default);
+            primeiro = ultimo = new Celula();
+            contador = 0;
         }
-
-        public void Inserir(T elemento)
+        public int Count()
         {
-            ultimo.Prox = new Celula<T>(elemento);
-            ultimo = ultimo.Prox;
+            return contador;
         }
 
-        public T Remover()
+        public void Inserir(Candidato elemento)
+        {
+            ultimo.Prox = new Celula(elemento);
+            ultimo = ultimo.Prox;
+            contador++;
+        }
+
+        public Candidato Remover()
         {
             if (primeiro == ultimo)
                 throw new InvalidOperationException("Fila vazia!");
 
-            Celula<T> tmp = primeiro.Prox;
+            Celula tmp = primeiro.Prox;
             primeiro = primeiro.Prox;
 
-            T removido = primeiro.Elemento;
+            Candidato removido = primeiro.Elemento;
             tmp.Prox = null;
+
+            contador--;
 
             return removido;
         }
 
-        public bool Pesquisar(T elemento)
+
+        public bool Pesquisar(Candidato elemento)
         {
-            for (Celula<T> i = primeiro.Prox; i != null; i = i.Prox)
+            for (Celula i = primeiro.Prox; i != null; i = i.Prox)
             {
                 if (i.Elemento.Equals(elemento))
                     return true;
@@ -43,10 +55,22 @@ namespace Universidade_Stark_AED.DataStructures
 
         public void Exibir()
         {
-            for (Celula<T> i = primeiro.Prox; i != null; i = i.Prox)
+            for (Celula i = primeiro.Prox; i != null; i = i.Prox)
             {
-                Console.WriteLine(i.Elemento);
+                Console.WriteLine(i.Elemento.ToString());
             }
+        }
+       
+        public List<Candidato> ParaLista()
+        {
+            List<Candidato> lista = new List<Candidato>();
+
+            for (Celula i = primeiro.Prox; i != null; i = i.Prox)
+            {
+                lista.Add(i.Elemento);
+            }
+
+            return lista;
         }
     }
 
