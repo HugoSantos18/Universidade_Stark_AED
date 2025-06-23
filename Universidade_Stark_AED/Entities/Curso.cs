@@ -107,7 +107,7 @@ namespace Universidade_Stark_AED.Entities
 
         public override string ToString()
         {
-            return $"{_nomeCurso} " + $"{_notaCorte:F2}";
+            return $"{_nomeCurso} - {_notaCorte:F2}";
         }
     }
 }

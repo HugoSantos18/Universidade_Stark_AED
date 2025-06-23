@@ -11,15 +11,21 @@ namespace Universidade_Stark_AED.Services
     {
         public void QuickSort(List<Candidato> lista, int esq, int dir)
         {
+            if (lista == null || lista.Count == 0)
+                return;
+
+            if (esq < 0 || dir >= lista.Count || esq >= dir)
+                return;
+
             int i = esq, j = dir;
-            Candidato pivo = lista[(esq + dir) / 2];
-            ComparadorDeCandidatos comparador = new ComparadorDeCandidatos();
+            double pivoNota = lista[(esq + dir) / 2].MediaNotas();
 
             while (i <= j)
             {
-                while (i <= j && comparador.Compare(lista[i], pivo) > 0)
+                while (i <= dir && lista[i].MediaNotas() > pivoNota)
                     i++;
-                while (i <= j && comparador.Compare(lista[j], pivo) < 0)
+
+                while (j >= esq && lista[j].MediaNotas() < pivoNota)
                     j--;
 
                 if (i <= j)
